@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Comments">
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/comment_appbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+        <Toolbar
+            android:id="@+id/activity_comment_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:title="Forum">
+        </Toolbar>
+
+    </android.support.design.widget.AppBarLayout>
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_below="@id/comment_appbar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_below="@id/comment_appbar">
+
+    <LinearLayout
+        android:id="@+id/comment_header"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="0dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <com.mikhaellopez.circularimageview.CircularImageView
+            android:id="@+id/comment_profile_image"
+            app:civ_shadow_color="#000"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_margin="20dp"
+            android:elevation="5dp"
+            android:fadingEdgeLength="5dp"
+            android:src="@drawable/profile"
+            app:civ_border_width="0dp" />
+
+        <TextView
+            android:id="@+id/actvity_comment_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="loading..."
+            android:layout_margin="20dp"
+            android:textSize="26sp"
+            android:layout_toRightOf="@id/comment_header"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_below="@id/comment_header"
+        android:id="@+id/activity_comment_desc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:layout_marginBottom="15dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginStart="20dp"
+        android:justificationMode="inter_word"
+        android:text="loading..."
+        android:textSize="12sp" />
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/comment_forum_card_image_holder"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/activity_comment_desc"
+        app:cardCornerRadius="5dp"
+        android:clickable="true"
+        app:cardElevation="5dp"
+        app:cardMaxElevation="5dp">
+
+        <ImageView
+            android:id="@+id/comment_forum_card_image"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:src="@drawable/industry" />
+
+    </android.support.v7.widget.CardView>
+
+    <TextView
+        android:id="@+id/activity_comment_timestamp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@id/comment_forum_card_image_holder"
+        android:layout_margin="10dp"
+        android:fontFamily="sans-serif-thin"
+        android:text="loading..."
+        android:textColor="#505050"
+        android:textSize="16sp" />
+
+    <LinearLayout
+        android:id="@+id/comment_footer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/comment_forum_card_image_holder"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="20dp"
+        android:gravity="right"
+        android:orientation="horizontal">
+
+        <com.like.LikeButton
+            app:icon_type="star"
+            app:icon_size="20dp"
+            app:circle_start_color="@color/colorPrimary"
+            app:dots_primary_color="@color/colorPrimary"
+            app:dots_secondary_color="@color/colorPrimary"
+            app:circle_end_color="@color/colorPrimary"
+            android:layout_width="20dp"
+            android:layout_height="20dp"/>
+
+        <ImageView
+            android:id="@+id/comment_img_comment"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginStart="20dp"
+            android:src="@drawable/comment" />
+
+    </LinearLayout>
+    <View
+        android:background="#505050"
+        android:id="@+id/comment_line_view"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/comment_footer"/>
+
+    <TextView
+        android:id="@+id/comment_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Comments"
+        android:textSize="24sp"
+        android:layout_margin="20dp"
+        android:fontFamily="@font/montserratsemibold"
+        android:textColor="#000"
+        android:layout_below="@id/comment_line_view"/>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/comment_recycler"
+        android:layout_below="@id/comment_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="60dp">
+
+    </android.support.v7.widget.RecyclerView>
+
+</RelativeLayout>
+    </android.support.v4.widget.NestedScrollView>
+
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:layout_alignParentBottom="true"
+        android:elevation="10dp"
+        app:cardElevation="10dp">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent">
+
+
+            <EditText
+                android:id="@+id/activity_comments_enter_comment"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@null"
+                android:gravity="center_vertical"
+                android:paddingLeft="10dp"
+                android:hint="Comment"
+                android:textAllCaps="false"
+                />
+
+
+            <Button
+                android:id="@+id/btnComment"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="10dp"
+                android:layout_centerVertical="true"
+                android:background="@drawable/ic_send_button"/>
+        </RelativeLayout>
+
+    </android.support.v7.widget.CardView>
+
+</RelativeLayout>

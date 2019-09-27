@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFF"
+    tools:context=".NewForumForm">
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/appbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Toolbar
+            android:id="@+id/newforum_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="#FFF">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <Button
+                    android:id="@+id/activity_new_forum_form_btn_post"
+                    android:layout_width="wrap_content"
+                    android:layout_height="35dp"
+                    android:text="Post"
+                    android:textAllCaps="false"
+                    android:textColor="#fff"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="10dp"
+                    android:background="@drawable/follow_button_gradient"/>
+
+            </RelativeLayout>
+        </Toolbar>
+    </android.support.design.widget.AppBarLayout>
+
+    <RelativeLayout
+        android:id="@+id/image_relative"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_below="@id/appbar">
+
+        <com.mikhaellopez.circularimageview.CircularImageView
+            android:id="@+id/activity_new_forum_form_img_profile"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_margin="15dp"
+            android:src="@drawable/profile"
+            app:civ_border_width="0dp"/>
+
+    </RelativeLayout>
+    <EditText
+        android:id="@+id/activity_new_forum_form_edt_subject"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/image_relative"
+        android:hint="Subject"
+        android:gravity="top"
+        android:padding="10dp"
+        android:background="@null"
+        android:layout_below="@id/appbar"/>
+
+    <EditText
+        android:id="@+id/activity_new_forum_form_edt_post"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_toRightOf="@id/image_relative"
+        android:hint="Detailed Description"
+        android:gravity="top"
+        android:layout_above="@id/activity_new_forum_form_imageholder"
+        android:padding="10dp"
+        android:background="@null"
+        android:layout_below="@id/activity_new_forum_form_edt_subject"/>
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/activity_new_forum_form_add_image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_margin="20dp"
+        android:backgroundTint="@color/colorPrimaryDark"
+        android:src="@drawable/ic_photo_camera"/>
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/activity_new_forum_form_imageholder"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_above="@id/activity_new_forum_form_add_image"
+        android:layout_marginBottom="30dp"
+        android:visibility="gone"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:elevation="10dp"
+        app:cardElevation="10dp">
+
+        <ImageView
+            android:id="@+id/activity_new_forum_form_final_upload_image"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:src="@drawable/industry"
+            android:scaleType="centerCrop"/>
+
+    </android.support.v7.widget.CardView>
+
+</RelativeLayout>

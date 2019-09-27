@@ -1,0 +1,324 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="#fff"
+    android:layout_height="match_parent"
+    tools:context=".OthersProfile">
+
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/profile_image_holder"
+                android:layout_width="wrap_content"
+                app:cardMaxElevation="10dp"
+                android:layout_marginTop="20dp"
+                android:layout_centerHorizontal="true"
+                app:cardCornerRadius="62dp"
+                app:cardElevation="10dp"
+                android:elevation="10dp"
+                android:layout_height="wrap_content">
+
+                <com.mikhaellopez.circularimageview.CircularImageView
+                    android:id="@+id/profile_image"
+                    android:layout_width="120dp"
+                    android:layout_height="120dp"
+                    android:src="@drawable/profile"
+                    app:civ_border_width="0dp"/>
+            </android.support.v7.widget.CardView>
+
+        <TextView
+            android:id="@+id/profile_username"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/profile_image_holder"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/montserratregular"
+            android:text="Verified"
+            android:gravity="center_vertical"
+            android:drawablePadding="10dp"
+            android:drawableLeft="@drawable/ic_checkmark"
+            android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/profile_fullname"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/profile_username"
+                android:text="Loading.."
+                android:textSize="23sp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="5dp"
+                android:fontFamily="@font/montserratsemibold"
+                android:textColor="#000"/>
+
+
+            <RelativeLayout
+                android:id="@+id/profile_detail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_below="@id/profile_fullname"
+                android:gravity="center">
+
+                <TextView
+                    android:id="@+id/profile_location"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawablePadding="10dp"
+                    android:text="loading..."
+                    android:fontFamily="@font/montserratlight"
+                    android:gravity="center"
+                    android:drawableStart="@drawable/ic_location_on"/>
+
+                <TextView
+                    android:id="@+id/profile_business_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="loading..."
+                    android:drawablePadding="10dp"
+                    android:fontFamily="@font/montserratlight"
+                    android:layout_marginStart="40dp"
+                    android:layout_toRightOf="@id/profile_location"
+                    android:drawableStart="@drawable/ic_work"/>
+            </RelativeLayout>
+
+            <Button
+                android:id="@+id/others_profile_view_details"
+                android:layout_width="190dp"
+                android:layout_height="40dp"
+                android:layout_below="@id/profile_detail"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="30dp"
+                android:background="@drawable/follow_button_gradient"
+                android:text="View Business Details"
+                android:textAllCaps="false"
+                android:textSize="14sp"
+                android:fontFamily="@font/montserratsemibold"
+                android:textColor="#fff" />
+
+
+            <RelativeLayout
+                android:id="@+id/profile_card_holder"
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:gravity="center"
+                android:layout_marginTop="15dp"
+                android:layout_below="@id/others_profile_view_details">
+
+                <android.support.v7.widget.CardView
+                    android:id="@+id/profile_card1"
+                    android:layout_width="150dp"
+                    android:layout_height="60dp"
+                    app:cardMaxElevation="10dp"
+                    app:cardCornerRadius="5dp"
+                    app:cardElevation="10dp"
+                    android:elevation="10dp">
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:background="@drawable/gradient_profile_cards">
+
+                        <TextView
+                            android:id="@+id/profile_card_data2"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Contact"
+                            android:fontFamily="@font/montserratregular"
+                            android:textColor="#fff"
+                            android:gravity="center"
+
+                            />
+                    </RelativeLayout>
+                </android.support.v7.widget.CardView>
+
+                <android.support.v7.widget.CardView
+                    android:id="@+id/profile_card2"
+                    android:layout_width="150dp"
+                    android:layout_height="60dp"
+                    android:layout_toRightOf="@id/profile_card1"
+                    app:cardMaxElevation="10dp"
+                    app:cardElevation="10dp"
+                    app:cardCornerRadius="5dp"
+                    android:layout_marginStart="20dp"
+                    android:elevation="10dp">
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:background="@drawable/gradient_profile_cards">
+                        <TextView
+                            android:id="@+id/profile_card_data1.2"
+                            android:layout_width="match_parent"
+                            android:gravity="center"
+                            android:textSize="20sp"
+                            android:fontFamily="@font/montserratbold"
+                            android:textColor="#fff"
+                            android:layout_height="wrap_content"
+                            android:text="0"/>
+
+                        <TextView
+                            android:id="@+id/profile_card_data2.2"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Posts"
+                            android:fontFamily="@font/montserratregular"
+                            android:textColor="#fff"
+                            android:layout_below="@id/profile_card_data1.2"
+                            android:gravity="center"
+
+                            />
+                    </RelativeLayout>
+                </android.support.v7.widget.CardView>
+
+            </RelativeLayout>
+
+        <TableLayout
+            android:id="@+id/others_profile_business_detail_table"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/profile_card_holder"
+            android:layout_marginStart="30dp"
+            android:visibility="gone"
+            android:layout_marginEnd="30dp">
+
+            <TableRow
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent">
+
+                <TextView
+                    android:text="Email"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_column="1"
+                    android:layout_weight="2"/>
+
+                <TextView
+                    android:id="@+id/activity_others_profile_email"
+                    android:text="loading..."
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_column="2" />
+
+
+            </TableRow>
+
+            <TableRow>
+
+                <TextView
+                    android:layout_marginTop="10dp"
+                    android:text="GSTIN Number"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_column="1" />
+                <TextView
+                    android:id="@+id/activity_others_profile_gstin"
+                    android:text="loading..."
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_column="2" />
+            </TableRow>
+
+            <TableRow>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="21dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_weight="2"
+                    android:layout_column="1"
+                    android:text="Industry" />
+
+                <TextView
+                    android:id="@+id/activity_others_profile_industry"
+                    android:text="loading..."
+                    android:layout_marginTop="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_column="2" />
+            </TableRow>
+
+            <TableRow>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="21dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_weight="2"
+                    android:layout_column="1"
+                    android:text="Nature of Business" />
+
+                <TextView
+                    android:id="@+id/activity_others_profile_natue_of_business"
+                    android:text="loading..."
+                    android:layout_marginTop="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_column="2" />
+            </TableRow>
+
+            <TableRow>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="21dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_weight="2"
+                    android:layout_column="1"
+                    android:text="Business type" />
+
+                <TextView
+                    android:id="@+id/activity_others_profile_business_type"
+                    android:text="loading..."
+                    android:layout_marginTop="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_column="2" />
+            </TableRow>
+
+            <EditText
+                android:id="@+id/activity_others_profile_ihave"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/text_layout_stroke_normal"
+                android:gravity="top"
+                android:clickable="false"
+                android:hint="I have"
+                android:layout_marginTop="30dp"
+                android:inputType="textMultiLine"
+                android:overScrollMode="always"
+                android:padding="15dp"
+                android:scrollbarStyle="insideInset"
+                android:scrollbars="vertical" />
+
+            <EditText
+                android:id="@+id/activity_others_profile_iask"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/text_layout_stroke_normal"
+                android:gravity="top"
+                android:clickable="false"
+                android:hint="I am looking for"
+                android:layout_marginTop="30dp"
+                android:inputType="textMultiLine"
+                android:overScrollMode="always"
+                android:padding="15dp"
+                android:scrollbarStyle="insideInset"
+                android:scrollbars="vertical"
+                android:layout_marginBottom="40dp"/>
+
+        </TableLayout>
+
+
+        </RelativeLayout>
+    </android.support.v4.widget.NestedScrollView>
+    </RelativeLayout>

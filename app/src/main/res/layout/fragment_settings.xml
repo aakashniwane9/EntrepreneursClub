@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/appbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+        <Toolbar
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:title="Settings">
+        </Toolbar>
+    </android.support.design.widget.AppBarLayout>
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_below="@id/appbar"
+        android:layout_width="match_parent"
+        android:layout_height="600dp">
+        <RelativeLayout
+            android:id="@+id/setting_relative_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:id="@+id/frag_settings_invite"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Invite"
+                android:fontFamily="@font/montserratsemibold"
+                android:textColor="#000"
+                android:layout_marginLeft="30dp"
+                android:textSize="20sp"
+                android:layout_marginTop="40dp"/>
+
+            <TextView
+                android:id="@+id/frag_settings_contact"
+                android:drawableLeft="@drawable/ic_person_add_black_24dp"
+                android:drawablePadding="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Invite Contacts"
+                android:layout_below="@id/frag_settings_invite"
+                android:fontFamily="@font/montserratlight"
+                android:textColor="#000"
+                android:layout_marginLeft="70dp"
+                android:textSize="20sp"
+                android:layout_marginTop="15dp"/>
+
+            <TextView
+                android:id="@+id/frag_settings_account_privacy"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Account Privacy"
+                android:layout_below="@id/frag_settings_contact"
+                android:fontFamily="@font/montserratsemibold"
+                android:textColor="#000"
+                android:layout_marginLeft="30dp"
+                android:textSize="20sp"
+                android:layout_marginTop="40dp"/>
+
+            <TextView
+                android:id="@+id/frag_settings_password"
+                android:drawablePadding="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Change Password"
+                android:layout_below="@id/frag_settings_account_privacy"
+                android:fontFamily="@font/montserratlight"
+                android:textColor="#000"
+                android:layout_marginLeft="70dp"
+                android:textSize="20sp"
+                android:layout_marginTop="15dp"/>
+
+            <TextView
+                android:id="@+id/frag_settings_support"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Support"
+                android:layout_below="@id/frag_settings_password"
+                android:fontFamily="@font/montserratsemibold"
+                android:textColor="#000"
+                android:layout_marginLeft="30dp"
+                android:textSize="20sp"
+                android:layout_marginTop="40dp"/>
+
+            <TextView
+                android:id="@+id/frag_settings_terms"
+                android:drawablePadding="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Terms of Use"
+                android:layout_below="@id/frag_settings_support"
+                android:fontFamily="@font/montserratlight"
+                android:textColor="#000"
+                android:layout_marginLeft="70dp"
+                android:textSize="20sp"
+                android:layout_marginTop="15dp"/>
+
+            <TextView
+                android:id="@+id/frag_settings_problem"
+                android:drawablePadding="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Report a Problem"
+                android:layout_below="@id/frag_settings_terms"
+                android:fontFamily="@font/montserratlight"
+                android:textColor="#000"
+                android:layout_marginLeft="70dp"
+                android:textSize="20sp"
+                android:layout_marginTop="15dp"/>
+
+            <TextView
+                android:id="@+id/frag_settings_block"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Blocked Users"
+                android:layout_below="@id/frag_settings_problem"
+                android:fontFamily="@font/montserratsemibold"
+                android:textColor="#FF6347"
+                android:layout_marginLeft="30dp"
+                android:textSize="20sp"
+                android:layout_marginTop="40dp"/>
+
+            <Button
+                android:id="@+id/frag_settings_logout"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:text="Logout"
+                android:textAllCaps="false"
+                android:layout_below="@id/frag_settings_block"
+                android:fontFamily="@font/montserratsemibold"
+                android:textColor="#FFF"
+                android:background="@drawable/follow_button_gradient"
+                android:layout_marginLeft="30dp"
+                android:textSize="15sp"
+                android:layout_marginTop="40dp"/>
+
+        </RelativeLayout>
+    </android.support.v4.widget.NestedScrollView>
+</RelativeLayout>

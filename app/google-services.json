@@ -1,0 +1,56 @@
+{
+  "project_info": {
+    "project_number": "38622535948",
+    "firebase_url": "https://entreprenuersclub-f7512.firebaseio.com",
+    "project_id": "entreprenuersclub-f7512",
+    "storage_bucket": "entreprenuersclub-f7512.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:38622535948:android:a35c2795859068c3",
+        "android_client_info": {
+          "package_name": "com.club.business"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "38622535948-4fr34crvg749jggjhm5ths8ap840jrt0.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.club.business",
+            "certificate_hash": "d1baed16585620ae39d31b2597fbdfb29c6b7647"
+          }
+        },
+        {
+          "client_id": "38622535948-t8t4161626ivpbo44e46ememj4gl2ppp.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.club.business",
+            "certificate_hash": "ccb68f8d209038602df11e9bd233ebff568c7d69"
+          }
+        },
+        {
+          "client_id": "38622535948-j0j5g7a87r17vjvtsdsr3hphb662kki9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCG5xTyoWD_s1Efs4PF2JwCosQUVZdfurA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "38622535948-j0j5g7a87r17vjvtsdsr3hphb662kki9.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

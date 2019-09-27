@@ -1,0 +1,43 @@
+<resources>
+    <string name="app_name">Entreprenuer Club</string>
+    <string name="title_activity_home_page">HomePage</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="messageWithLink">Account Already Exists???<a href="Login"></a></string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string-array name="industry">
+        <item>Agriculture</item>
+        <item>Artificial Intelligence</item>
+        <item>AR/VR</item>
+        <item>Advertising</item>
+        <item>Aeronautics - Aerospace &amp; Defence</item>
+        <item>Art &amp; Photography</item>
+        <item>Automobile</item>
+        <item>Chemical</item>
+        <item>Computer Vision</item>
+        <item>Construction</item>
+        <item>Design</item>
+        <item>Education</item>
+        <item>Electronics</item>
+        <item>Events</item>
+        <item>Fashion</item>
+        <item>Health Care</item>
+        <item>Information Technology</item>
+        <item>Media &amp; Entertainment</item>
+        <item>Real Estate</item>
+    </string-array>
+    <string-array name="scale">
+        <item>Small Enterprise</item>
+        <item>Medium Enterprise</item>
+        <item>Large Enterprise</item>
+    </string-array>
+    <string-array name="nature">
+        <item>Sole Proprietor</item>
+        <item>Limited Liability Partnership</item>
+        <item>Registered Partnership Firm</item>
+        <item>Private Limited Company</item>
+        <item>Public Limited Company</item>
+    </string-array>
+</resources>

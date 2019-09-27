@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="10dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout
+        android:id="@+id/comment_recycler_header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <com.mikhaellopez.circularimageview.CircularImageView
+            android:id="@+id/comment_recycler_profile_image"
+            app:civ_shadow_color="#000"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_margin="20dp"
+            android:elevation="5dp"
+            android:fadingEdgeLength="5dp"
+            android:src="@drawable/profile"
+            app:civ_border_width="0dp" />
+
+        <TextView
+            android:id="@+id/comment_recycler_username"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Omkar Raykar"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/montserratsemibold"
+            android:textSize="15dp"
+            android:textColor="#000"
+            android:layout_toRightOf="@id/comment_recycler_profile_image"/>
+
+
+        <TextView
+            android:id="@+id/comment_recycler_timestamp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="12 mins ago"
+            android:fontFamily="@font/montserratthin"
+            android:textSize="16sp"
+            android:textColor="#000"
+            android:layout_marginTop="5dp"
+            android:layout_below="@id/comment_recycler_username"
+            android:layout_toRightOf="@id/comment_recycler_profile_image"/>
+
+
+
+
+        <TextView
+            android:id="@+id/comment_recycler_usercomment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/comment_recycler_profile_image"
+            android:text="Your Comments Here..."
+            android:textSize="15sp"
+            android:layout_marginStart="40dp"
+            android:layout_marginEnd="40dp"/>
+
+
+    </RelativeLayout>
+
+    <View
+        android:background="#99707070"
+        android:layout_below="@id/comment_recycler_header"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_marginTop="30dp"/>
+
+
+
+
+</RelativeLayout>
